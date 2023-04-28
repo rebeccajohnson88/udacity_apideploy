@@ -28,7 +28,7 @@ We examine three accuracy statistics: precision, recall, and the Fbeta measure. 
 
 These values indicate that we are relatively good at avoiding false positives, or predicting a $>$\$50,000 salary in cases where we do not attain one. However, the recall measure shows that we have a non-trivial number of false negatives- or people who attain that salary but who we predict they dont. Overall, the performance metrics indicate the need for substantial improvement.
 
-(https://github.com/rebeccajohnson88/udacity_apideploy/blob/master/slice_output.txt)[Subgroup metrics]: shows the metrics separately for different levels of educational attainment. We see the models perform best for those with a BA or higher, and especially those who attend professional school.
+[Subgroup metrics](https://github.com/rebeccajohnson88/udacity_apideploy/blob/master/slice_output.txt): shows the metrics separately for different levels of educational attainment. We see the models perform best for those with a BA or higher, and especially those who attend professional school.
 
 ## Ethical Considerations
 
