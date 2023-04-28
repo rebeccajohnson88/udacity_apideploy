@@ -2,6 +2,7 @@
 
 ## Directory structure
 
+```
 ├── CODEOWNERS
 ├── LICENSE.txt
 ├── README.md
@@ -24,3 +25,4 @@
 │   └── train_model.py
 └── tests
     └── test_train_model.py
+```
