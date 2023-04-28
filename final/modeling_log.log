@@ -1,0 +1,19 @@
+2023-04-28 14:40:32,032 read in data
+2023-04-28 14:40:32,037 generated train-test split
+2023-04-28 14:40:32,136 processed training data
+2023-04-28 14:46:53,012 read in data
+2023-04-28 14:46:53,017 generated train-test split
+2023-04-28 14:46:53,130 processed training data
+2023-04-28 14:46:53,161 processed test data
+2023-04-28 14:47:36,790 read in data
+2023-04-28 14:47:36,796 generated train-test split
+2023-04-28 14:47:36,897 processed training data
+2023-04-28 14:47:36,926 processed test data
+2023-04-28 14:47:37,351 Stored model result
+2023-04-28 14:48:52,130 read in data
+2023-04-28 14:48:52,135 generated train-test split
+2023-04-28 14:48:52,231 processed training data
+2023-04-28 14:48:52,253 processed test data
+2023-04-28 14:48:52,613 Stored model result
+2023-04-28 14:48:52,614 generated predictions
+2023-04-28 14:48:52,623 Precision 0.6895306859205776; recall 0.24597553122987767; f beta 0.36260085429520644
