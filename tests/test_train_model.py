@@ -20,12 +20,12 @@ logger = logging.getLogger()
 # Add fixtures for data and model objects
 @pytest.fixture(name = "raw_data")
 def data_loaded():
-    data = pd.read_csv("../data/census_clean.csv")
+    data = pd.read_csv("./data/census_clean.csv")
     return data
 
 @pytest.fixture(name = "model_result")
 def model_loaded():
-    with open('../model/model_result.pkl', 'rb') as f:
+    with open('./model/model_result.pkl', 'rb') as f:
         model_result = pickle.load(f)
         f.close()
     return model_result
@@ -50,10 +50,10 @@ def test_classifier(model_result):
         raise err
 
 def test_predictions(model_result, raw_data):
-    with open('../model/encoder.pkl', 'rb') as f:
+    with open('./model/encoder.pkl', 'rb') as f:
         encoder = pickle.load(f)
         f.close()
-    with open('../model/lb.pkl', 'rb') as f:
+    with open('./model/lb.pkl', 'rb') as f:
         lb = pickle.load(f)
         f.close()
     cat_features = [
