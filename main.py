@@ -7,6 +7,9 @@ from typing import Union
 
 from src.ml.data import process_data
 from src.ml.model import inference
+import pickle
+
+import numpy as np
 
 ## Define categorical features
 cat_features = [
@@ -92,8 +95,9 @@ async def predict_results(input_data: InputData):
      encoder = encoder, lb = lb)
 
     # Generate inferences 
-	prediction = inference(model_result, X_new)
+	pred_raw = inference(model_result, X_new)
+	pred_label = ">50K" if pred_raw[0] > 0.5 else "<=50K"
 
     # Return prediction
-	return({'predicted_salary': prediction})
+	return({'predicted_salary': pred_label})
 

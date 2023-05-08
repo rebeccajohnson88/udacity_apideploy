@@ -31,7 +31,7 @@ messy_df = pd.read_csv("../data/census.csv")
 
 ## first clean columns
 col1 = [re.sub("\\s+", "", col) for col in messy_df.columns]
-messy_df.columns = [re.sub("\\-", "_", col) for col in col1]
+messy_df.columns = col1
 
 ## then, clean whitespace itself
 clean_df = whitespace_remover(messy_df)
