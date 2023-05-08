@@ -4,6 +4,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Union
+import pandas as pd
 
 from src.ml.data import process_data
 from src.ml.model import inference

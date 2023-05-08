@@ -37,7 +37,7 @@ def test_predict_over50():
 
     # test response code and output
     assert response.status_code == 200
-    assert r.json()["predicted_salary"] == '>50K'
+    assert response.json()["predicted_salary"] == '>50K'
 
 
 
@@ -65,5 +65,5 @@ def test_predict_under50():
 
     # test response code and output
     assert response.status_code == 200
-    assert r.json()["predicted_salary"] == '<=50K'
+    assert response.json()["predicted_salary"] == '<=50K'
 
