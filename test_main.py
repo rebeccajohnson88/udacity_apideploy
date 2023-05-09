@@ -32,7 +32,7 @@ def test_predict_over50():
             'hours_per_week': 60,
             'native_country': 'Honduras'
             }
-    data_topost_json = json.dumps(data_topost)
+    #data_topost_json = json.dumps(data_topost)
     response = client.post("/predictions", data=data_topost_json)
 
     # test response code and output
@@ -49,18 +49,18 @@ def test_predict_under50():
         'workclass': 'Self-emp-not-inc',
         'fnlgt': 176756,
         'education': 'HS-grad',
-        'education-num': 9,
-        'marital-status': 'Never-married',
+        'education_num': 9,
+        'marital_status': 'Never-married',
         'occupation': 'Farming-fishing',
         'relationship': 'Own-child',
         'race': 'White',
         'sex': 'Male',
-        'capital-gain': 0,
-        'capital-loss': 0,
-        'hours-per-week': 35,
-        'native-country': 'United-States'}
+        'capital_gain': 0,
+        'capital_loss': 0,
+        'hours_per_week': 35,
+        'native_country': 'United-States'}
 
-    data_topost_json = json.dumps(data_topost)
+    #data_topost_json = json.dumps(data_topost)
     response = client.post("/predictions", data=data_topost_json)
 
     # test response code and output
