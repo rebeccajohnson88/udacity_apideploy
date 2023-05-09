@@ -33,7 +33,7 @@ def test_predict_over50():
             'native_country': 'Honduras'
             }
     #data_topost_json = json.dumps(data_topost)
-    response = client.post("/predictions", data=data_topost_json)
+    response = client.post("/predictions", data=data_topost)
 
     # test response code and output
     assert response.status_code == 200
@@ -61,7 +61,7 @@ def test_predict_under50():
         'native_country': 'United-States'}
 
     #data_topost_json = json.dumps(data_topost)
-    response = client.post("/predictions", data=data_topost_json)
+    response = client.post("/predictions", data=data_topost)
 
     # test response code and output
     assert response.status_code == 200
