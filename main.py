@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Union
 import pandas as pd
+import re
 
 from src.ml.data import process_data
 from src.ml.model import inference
@@ -76,6 +77,10 @@ async def predict_results(input_data: InputData):
 
 	# Turn input into dataframe
 	raw_data = pd.DataFrame([dict(input_data)])
+
+	# Change column names
+	new_names = [re.sub("\\_", "-", col) for col in raw_data.columns]
+	raw_data.columns = new_names 
 
 	# Load model objects
 	with open('model/model_result.pkl', 'rb') as f:
